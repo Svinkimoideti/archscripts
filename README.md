@@ -1,38 +1,79 @@
-# 📁 Scripts
+# 📁 Arch Scripts
+
+> 🐧 Набор утилит для Arch Linux
 
 ---
 
-## 🧹 clear.sh
+## 📜 Скрипты
 
-> 🎯 **Назначение:** Очистка системы от мусора
-
-| ⚙️ Действие | 📝 Описание |
-|-------------|-------------|
-| 📓 Логи | Очистка systemd логов старше 2 дней |
-| 🗑️ Временные файлы | Удаление содержимого `/tmp` |
-| 📦 Пакеты | Удаление неиспользуемых пакетов (orphan) |
-| 💾 Кэш | Очистка кэша AUR (yay) |
-
-```bash
-./clear.sh
-```
-
-> ⚠️ При запуске запрашивает подтверждение `[Y/n]`
+| 🔧 Скрипт | 📝 Описание |
+|-----------|-------------|
+| 🧹 `clear.sh` | Очистка системы от мусора |
+| 🔄 `update.sh` | Обновление системы и репозиториев |
+| 🎮 `discord-rpc.py` | Discord Rich Presence |
+| 📦 `install.sh` | Автоматическая установка пакетов |
+| 💾 `backup.sh` | Бэкап конфигов и dotfiles |
+| 🪞 `mirrorlist.sh` | Обновление зеркал pacman |
+| 📰 `news.sh` | Проверка Arch Linux новостей |
+| ⚙️ `services.sh` | Управление systemd сервисами |
+| 💿 `disk.sh` | Обзор использования диска |
+| 📸 `screenshot.sh` | Быстрые скриншоты |
+| 🎮 `gpu.sh` | Инфо о GPU и драйверах |
 
 ---
 
-## 🔄 update.sh
-
-> 🎯 **Назначение:** Обновление системы и репозиториев
-
-| ⚙️ Действие | 📝 Описание |
-|-------------|-------------|
-| 🐧 Система | Обновление всех пакетов через `yay -Syu` |
-| 🛡️ zapret | Обновление `zapret-discord-youtube-linux` |
-| 📡 tg-ws | Обновление `tg-ws-proxy` |
-| 📱 Flatpak | Обновление Flatpak-пакетов |
+## 🚀 Быстрый старт
 
 ```bash
-./update.sh
+# 📥 Клонируй репозиторий
+git clone https://github.com/Svinkimoideti/archscripts.git ~/archscripts
+
+# 🔑 Сделай скрипты исполняемыми
+chmod +x ~/archscripts/*.sh
+
+# 🔗 Добавь в PATH (опционально)
+echo 'export PATH="$PATH:$HOME/archscripts"' >> ~/.zshrc
 ```
 
+---
+
+## 📦 Зависимости
+
+```bash
+# 🪞 Для mirrorlist.sh
+sudo pacman -S reflector
+
+# 📸 Для screenshot.sh
+sudo pacman -S grim slurp   # Wayland
+# или
+sudo pacman -S scrot         # X11
+# или
+sudo pacman -S maim          # X11
+
+# 🎮 Для gpu.sh
+sudo pacman -S mesa-utils
+```
+
+---
+
+## 📂 Структура
+
+```
+archscripts/
+├── 📜 README.md
+├── 🧹 clear.sh
+├── 🔄 update.sh
+├── 🎮 discord-rpc.py
+├── 📦 install.sh
+├── 💾 backup.sh
+├── 🪞 mirrorlist.sh
+├── 📰 news.sh
+├── ⚙️ services.sh
+├── 💿 disk.sh
+├── 📸 screenshot.sh
+└── 🎮 gpu.sh
+```
+
+---
+
+> 💡 **Совет:** Добавь скрипты в `~/.local/bin` для глобального доступа!
