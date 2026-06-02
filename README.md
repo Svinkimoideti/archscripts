@@ -29,10 +29,10 @@
 git clone https://github.com/Svinkimoideti/archscripts.git ~/archscripts
 
 # 🔑 Сделай скрипты исполняемыми
-chmod +x ~/archscripts/*.sh
+chmod +x ~/archscripts/scripts/*.sh
 
 # 🔗 Добавь в PATH (опционально)
-echo 'export PATH="$PATH:$HOME/archscripts"' >> ~/.zshrc
+echo 'export PATH="$PATH:$HOME/archscripts/scripts"' >> ~/.zshrc
 ```
 
 ---
@@ -61,17 +61,18 @@ sudo pacman -S mesa-utils
 ```
 archscripts/
 ├── 📜 README.md
-├── 🧹 clear.sh
-├── 🔄 update.sh
-├── 🎮 discord-rpc.py
-├── 📦 install.sh
-├── 💾 backup.sh
-├── 🪞 mirrorlist.sh
-├── 📰 news.sh
-├── ⚙️ services.sh
-├── 💿 disk.sh
-├── 📸 screenshot.sh
-└── 🎮 gpu.sh
+└── 📁 scripts/
+    ├── 🧹 clear.sh
+    ├── 🔄 update.sh
+    ├── 🎮 discord-rpc.py
+    ├── 📦 install.sh
+    ├── 💾 backup.sh
+    ├── 🪞 mirrorlist.sh
+    ├── 📰 news.sh
+    ├── ⚙️ services.sh
+    ├── 💿 disk.sh
+    ├── 📸 screenshot.sh
+    └── 🎮 gpu.sh
 ```
 
 ---
