@@ -1,2 +1,34 @@
-# archscripts
-Small scripts for archlinux for update/clear your system
+# Scripts
+
+## clear.sh
+
+Скрипт очистки системы.
+
+**Действия:**
+- Очищает логи systemd старше 2 дней (`journalctl --vacuum-time=2d`)
+- Удаляет содержимое `/tmp`
+- Удаляет неиспользуемые пакеты (`pacman -Rns`)
+- Очищает кэш AUR (`yay -Scc`)
+
+**Использование:**
+```bash
+./clear.sh
+```
+При запуске запрашивает подтверждение `[Y/n]`.
+
+---
+
+## update.sh
+
+Скрипт обновления системы и репозиториев.
+
+**Действия:**
+- Обновляет все пакеты через `yay -Syu`
+- Обновляет репозиторий `zapret-discord-youtube-linux` (git pull)
+- Обновляет репозиторий `tg-ws-proxy` (git pull)
+- Обновляет Flatpak-пакеты
+
+**Использование:**
+```bash
+./update.sh
+```
