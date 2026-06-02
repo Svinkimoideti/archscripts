@@ -63,7 +63,6 @@ archscripts/
 └── 📁 scripts/
     ├── 🧹 clear.sh
     ├── 🔄 update.sh
-    ├── 🎮 discord-rpc.py
     ├── 📦 install.sh
     ├── 💾 backup.sh
     ├── 🪞 mirrorlist.sh
