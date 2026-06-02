@@ -10,7 +10,6 @@
 |-----------|-------------|
 | 🧹 `clear.sh` | Очистка системы от мусора |
 | 🔄 `update.sh` | Обновление системы и репозиториев |
-| 🎮 `discord-rpc.py` | Discord Rich Presence |
 | 📦 `install.sh` | Автоматическая установка пакетов |
 | 💾 `backup.sh` | Бэкап конфигов и dotfiles |
 | 🪞 `mirrorlist.sh` | Обновление зеркал pacman |
